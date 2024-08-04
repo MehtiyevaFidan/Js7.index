@@ -1,0 +1,20 @@
+<script>
+    function indextapma(ber, berber) {
+        const index = [];
+        let baslangic = 0;
+        const parts = ber.split(berber);
+
+        for (let i = 0; i < parts.length - 1; i++) {
+            baslangic += parts[i].length + berber.length;
+            index.push(baslangic - berber.length);
+        }
+
+        return index;
+    }
+    const ber = "Bir bərbər bir bərbərə gəl bərabər bir bərbər dükanı açaq demiş";
+    const berber = "bər";
+    const index = indextapma(ber, berber);
+    
+    console.log(index);
+
+</script>
